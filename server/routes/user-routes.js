@@ -3,8 +3,9 @@ const router = express.Router()
 
 const AWS = require('aws-sdk')
 const awsConfig = {
-	region   : 'us-east-2',
-	endpoint : 'http://localhost:8000'
+	region : 'us-east-2'
+	// for development on local dynamodb instance
+	// endpoint : 'http://localhost:8000'
 }
 
 AWS.config.update(awsConfig)
@@ -70,7 +71,7 @@ router.post('/users', (req, res) => {
 			res.status(500).json(err)
 		} else {
 			console.log('Added item: ', JSON.stringify(data, null, 2))
-			res.json({ 'Added': JSON.stringify(data, null, 2) })
+			res.json({ Added: JSON.stringify(data, null, 2) })
 		}
 	})
 })
