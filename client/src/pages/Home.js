@@ -23,7 +23,7 @@ const Home = () => {
 		}
 		fetchData()
 		// only run once when component mounts
-	}, [thoughts])
+	}, [])
 
 	return (
 		<main>
