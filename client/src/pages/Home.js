@@ -23,7 +23,12 @@ const Home = () => {
 		}
 		fetchData()
 		// only run once when component mounts
+    // NOTE...if we add thoughts to the dependency array in order to make the component re-render when the user adds a new thought, it will cause an infinite loop of fetch requests to /api/users. 
+	// }, [thoughts])
 	}, [])
+
+  useEffect(() => {
+  },[thoughts])
 
 	return (
 		<main>
