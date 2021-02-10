@@ -5,6 +5,7 @@ import ThoughtForm from '../components/ThoughtForm'
 const Home = () => {
 	const [ isLoaded, setIsLoaded ] = useState(false)
 	const [ thoughts, setThoughts ] = useState([])
+  const [ thoughtAdded, setThoughtAdded ] = useState(false)
 
 	// const loggedIn = Auth.loggedIn();
 
@@ -29,6 +30,37 @@ const Home = () => {
 
   useEffect(() => {
   },[thoughts])
+
+//  HAD TO CHANGE TO THIS TO GET THE DEPLOYMENT ON AWS TO WORK  
+// import React, { useState, useEffect } from 'react'
+// import ThoughtList from '../components/ThoughtList'
+// import ThoughtForm from '../components/ThoughtForm'
+
+// const Home = () => {
+//         const [ isLoaded, setIsLoaded ] = useState(false)
+//         const [ thoughts, setThoughts ] = useState([])
+
+//         // const loggedIn = Auth.loggedIn();
+
+//         useEffect(() => {
+//                 const fetchData = async () => {
+//                         try {
+//                                 const res = await fetch('http://3.12.166.143/api/users')
+//                                 const data = await res.json()
+
+//                                 setThoughts(data)
+//                                 setIsLoaded(true)
+//                         } catch (err) {
+//                                 console.log(err)
+//                         }
+//                 }
+//                 fetchData()
+//                 // only run once when component mounts
+//     // NOTE...if we add thoughts to the dependency array in order to make the component re-render when the user adds a new thought, it will cause an infinite loo$        // }, [thoughts])
+//         }, [])
+
+//   useEffect(() => {
+//   },[thoughts])
 
 	return (
 		<main>

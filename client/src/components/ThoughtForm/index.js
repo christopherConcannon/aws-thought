@@ -62,6 +62,56 @@ const ThoughtForm = () => {
 		setCharacterCount(0)
 	}
 
+
+
+// FOR AWS DEPLOYMENT  
+//   // upload image file
+//   const handleImageUpload = (event) => {
+//     event.preventDefault()
+// // configure image file to be sent
+//     const data = new FormData()
+//     data.append('image', fileInput.current.files[0])
+//     // send image file to endpoint with the postImage function
+//     const postImage = async () => {
+//             try {
+//                     const res = await fetch('http://3.12.166.143/api/image-upload', {
+//                             mode   : 'cors',
+//                             method : 'POST',
+//                             body   : data
+//                     })
+//                     if (!res.ok) throw new Error(res.statusText)
+//                     const postResponse = await res.json()
+//                     setFormState({ ...formState, image: postResponse.Location })
+
+//                     return postResponse.Location
+//             } catch (err) {
+//                     console.log(err)
+//             }
+//     }
+//     postImage()  
+//   }
+//    // submit form
+//    const handleFormSubmit = (event) => {
+//     event.preventDefault()
+//     // POST method with formState
+//     const postData = async () => {
+//             const res = await fetch('http://3.12.166.143/api/users', {
+//                     method  : 'POST',
+//                     headers : {
+//                             Accept         : 'application/json',
+//                             'Content-Type' : 'application/json'
+//                     },
+//                     body    : JSON.stringify(formState)
+//             })
+//             const data = await res.json()
+//             console.log(data)
+//     }
+//     postData()
+//     // clear form value
+//     setFormState({ username: '', thought: '' })
+//     setCharacterCount(0)
+// }
+
 	return (
 		<div>
 			<p className={`m-0 ${characterCount === 280 ? 'text-error' : ''}`}>

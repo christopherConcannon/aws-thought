@@ -21,6 +21,7 @@ router.get('/users', (req, res) => {
 		if (err) {
 			res.status(500).json(err) // an error occurred
 		} else {
+      console.log(data.Items)
 			res.json(data.Items)
 		}
 	})

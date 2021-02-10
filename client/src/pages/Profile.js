@@ -41,6 +41,49 @@ const Profile = (props) => {
 		fetchData()
 	}, [userParam])
 
+
+// UPDATE TO THIS FOR AWS DEPLOYMENT
+// import React, { useEffect, useState } from 'react'
+// import { useParams } from 'react-router-dom'
+
+// import ThoughtForm from '../components/ThoughtForm'
+// import ThoughtList from '../components/ThoughtList'
+
+
+// const Profile = (props) => {
+//   // destructure username in url from react-router's useParams() and assign it an alias of userParam
+//         const { username: userParam } = useParams()
+//         const [ isLoaded, setIsLoaded ] = useState(false)
+//         const [ thoughts, setThoughts ] = useState([
+//                 {
+//                         username  : userParam,
+//                         createdAt : '',
+//                         thought   : ''
+//                 }
+//         ])
+
+//         useEffect(() => {
+//                 const fetchData = async () => {
+//                         try {
+//                                 const res = await fetch(`http://3.12.166.143/api/users/${userParam}`, {
+//                                         mode: 'cors',
+//                                         headers: {
+//                                                 ContentType: 'application/json'
+//                                         }
+//                                 })
+//                                 const data = await res.json()
+//                                 // sort the array by createdAt property ordered by descending values
+//                                 // const orderData = data.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1);
+//                                 console.log(data)
+//                                 setThoughts(data)
+//                                 setIsLoaded(true)
+//                         } catch (err) {
+//                                 console.log(err)
+//                         }
+//                 }
+//                 fetchData()
+//         }, [userParam])
+
 	return (
 		<div>
 			<div className='flex-row mb-3'>
