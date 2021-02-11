@@ -3,9 +3,9 @@ const router = express.Router()
 
 const AWS = require('aws-sdk')
 const awsConfig = {
-	region : 'us-east-2'
+	region : 'us-east-2',
 	// for development on local dynamodb instance
-	// endpoint : 'http://localhost:8000'
+	endpoint : 'http://localhost:8000'
 }
 
 AWS.config.update(awsConfig)
@@ -21,7 +21,7 @@ router.get('/users', (req, res) => {
 		if (err) {
 			res.status(500).json(err) // an error occurred
 		} else {
-      console.log(data.Items)
+      // console.log(data.Items)
 			res.json(data.Items)
 		}
 	})

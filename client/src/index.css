@@ -1,6 +1,7 @@
 :root {
   --primary: #497573;
-  --secondary: #99f7f2;
+  /* --secondary: #99f7f2; */
+  --secondary: #302f2f;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
   --light: #e1f5f4;
@@ -26,12 +27,15 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Inconsolata', monospace; */
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
-  color: var(--dark);
-  background-color: #f3fffee1;
+  background-color: var(--dark);
+  color: #f3fffee1;
+  /* color: var(--dark);
+  background-color: #f3fffee1; */
 }
 
 h1,
@@ -40,7 +44,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -123,8 +128,10 @@ nav a:hover {
 
 .btn:hover,
 .pill:hover {
+  /* color: var(--secondary);
+  background-color: var(--dark); */
+  background-color: var(--tertiary);
   color: var(--secondary);
-  background-color: var(--dark);
 }
 
 .btn-inline {
@@ -146,6 +153,7 @@ nav a:hover {
   background-color: var(--dark);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  border-top: 1px solid var(--tertiary);
 }
 
 .card-body {
