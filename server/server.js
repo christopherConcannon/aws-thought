@@ -5,8 +5,8 @@ const userRoutes = require('./routes/user-routes')
 const imageRoutes = require('./routes/image-upload')
 
 // express middleware, used to be bodyparser
-app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 // serve up static assets
 if (process.env.NODE_ENV === 'production') {

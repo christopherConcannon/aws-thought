@@ -22,6 +22,8 @@ const s3 = new AWS.S3({
 router.post('/image-upload', upload, (req, res) => {
   // set up params config
   const params = paramsConfig(req.file)
+
+  console.log('image params: ', params);
   // set up s3 service call
   s3.upload(params, (err, data) => {
     if (err) {
