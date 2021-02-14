@@ -43,12 +43,6 @@ This project is covered under the MIT license
 ## Technologies 
 HTML5, CSS3, React, Node.js, Express, AWS S3, DynamoDB, EC2 
 
-## Contributing
-To see the guidelines adopted for contributing to this project, please view the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.txt)
-
-## Testing
-Tests coming soon
-
 ## Questions
 Visit me at GitHub  
 [christopherConcannon](https://github.com/christopherConcannon)
